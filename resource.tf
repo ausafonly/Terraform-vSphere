@@ -2,7 +2,7 @@ resource "vsphere_virtual_machine" "vm" {
   name                 = "${var.vmname}${var.vmnamesuffix}"
   resource_pool_id     = "${data.vsphere_compute_cluster.cluster.resource_pool_id}"
   datastore_cluster_id = "${data.vsphere_datastore_cluster.datastore_cluster.id}"
-  folder               = "Vranger Backups/OPEN"
+  folder               = "Backups/OPEN"
 
   num_cpus                   = "${var.cpu}"
   cpu_hot_add_enabled        = true
